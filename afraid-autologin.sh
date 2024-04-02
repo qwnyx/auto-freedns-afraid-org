@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # @brief: auto login script for freedns.afraid.org
 # @author Geunsik Lim <leemgs@gmail.com>
@@ -18,4 +18,4 @@ PASS="xxxxxxx"
 URL="https://freedns.afraid.org/zc.php?/step=2&from=L3N1YmRvbWFpbi8=&action=auth&username=$ID&password=$PASS"
 curl --silent --output /dev/null -I --write-out "* HTTP_CODE: %{http_code}\n* REDIRECT_URL: %{redirect_url}\n* URL_EFFECTIVE: %{url_effective}\n" $URL
 echo -e ""
-echo -e "Note: If 'REDIRECT_URL' is empty, it means that the auto login is failed."
+echo -e "$(date) - Note: If 'REDIRECT_URL' is empty, it means that the auto login is failed."
