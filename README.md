@@ -21,4 +21,6 @@ $ sudo vi /etc/crontab
 ##### 2013-05-16: Refresh your login-in ID and IP address of your sub-domain at freedns.afraid.org
 30 * * * * root /etc/script/afraid-autoip.sh
 30 * * * * root /etc/script/afraid-autologin.sh
+
+* * 1 * * /root/script/afraid-autologin.sh >> /tmp/autologin.log 2>&1
 ```
